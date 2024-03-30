@@ -18,7 +18,7 @@ enum Transmission {
 // - Color of car (String)
 // - Transmission type (enum value)
 // - Convertible (boolean, true if car is a convertible)
-fn car_factory(color: String, transmission: Transmission, convertible: bool) {
+fn car_factory(color: String, transmission: Transmission, convertible: bool) -> Car {
 
     // Use the values of the input arguments
     // All new cars always have zero mileage
@@ -29,6 +29,7 @@ fn car_factory(color: String, transmission: Transmission, convertible: bool) {
         convertible: true,
         mileage: 0,
     };
+    return car;
 }
 
 fn main() {}
