@@ -15,4 +15,7 @@ fn main() {
     fruit.push("Banana");
     fruit.push("Cherry");
     println!("Fruits: {:?}", fruit);
+
+    // Push integer value, but vector expects String (&str) type value
+    fruit.push(1);
 }
