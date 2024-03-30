@@ -13,4 +13,7 @@ fn main() {
 
 // Get the second day of the week
     let second = days[1];
+
+// Get the seventh day of the week using the wrong index - should be 6
+    let seventh = days[7];
 }
