@@ -16,6 +16,8 @@ fn main() {
     fruit.push("Cherry");
     println!("Fruits: {:?}", fruit);
 
-    // Push integer value, but vector expects String (&str) type value
-    fruit.push(1);
+// Pop off value at end of vector
+// Call pop() method from inside println! macro
+    println!("Pop off: {:?}", fruit.pop());
+    println!("Fruits: {:?}", fruit);
 }
