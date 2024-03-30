@@ -22,14 +22,13 @@ fn car_factory(color: String, transmission: Transmission, convertible: bool) -> 
 
     // Use the values of the input arguments
     // All new cars always have zero mileage
-    let car = Car {
+    Car {
         color: String::from(
             "Red"),
         transmission: Transmission::Automatic,
         convertible: true,
         mileage: 0,
-    };
-    return car;
+    }
 }
 
 fn main() {}
