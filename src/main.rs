@@ -4,4 +4,13 @@ fn main() {
 
 // Declare array, initialize all values to 0, length = 5
     let bytes = [0; 5];
+
+// Days of the week
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+// Get the first day of the week
+    let first = days[0];
+
+// Get the second day of the week
+    let second = days[1];
 }
