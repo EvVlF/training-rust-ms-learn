@@ -14,4 +14,21 @@ enum Transmission {
     Automatic,
 }
 
+// Build a "Car" by using values from the input arguments
+// - Color of car (String)
+// - Transmission type (enum value)
+// - Convertible (boolean, true if car is a convertible)
+fn car_factory(color: String, transmission: Transmission, convertible: bool) {
+
+    // Use the values of the input arguments
+    // All new cars always have zero mileage
+    let car = Car {
+        color: String::from(
+            "Red"),
+        transmission: Transmission::Automatic,
+        convertible: true,
+        mileage: 0,
+    };
+}
+
 fn main() {}
