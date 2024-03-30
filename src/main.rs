@@ -1,10 +1,17 @@
-fn goodbye(message: &str) {
-    println!("\n{}", message);
+// Declare Car struct to describe vehicle with four named fields
+struct Car {
+    color: String,
+    transmission: Transmission,
+    convertible: bool,
+    mileage: u32,
 }
 
-fn main() {
-    let formal = "Formal: Goodbye.";
-    let casual = "Casual: See you later!";
-    goodbye(formal);
-    goodbye(casual);
+#[derive(PartialEq, Debug)]
+// Declare enum for Car transmission type
+enum Transmission {
+    Manual,
+    SemiAuto,
+    Automatic,
 }
+
+fn main() {}
