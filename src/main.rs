@@ -11,6 +11,7 @@ struct Car {
 // Declare enum for Car transmission type
 enum Transmission { Manual, SemiAuto, Automatic }
 
-fn main() {
+#[derive(PartialEq, Debug)]
+enum Age { New, Used }
 
-}
+fn main() {}
