@@ -4,7 +4,7 @@ struct Car {
     color: String,
     motor: Transmission,
     roof: bool,
-    age: Age,
+    tup: (Age, u32),
 }
 
 #[derive(PartialEq, Debug)]
