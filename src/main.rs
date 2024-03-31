@@ -4,7 +4,7 @@ struct Car {
     color: String,
     motor: Transmission,
     roof: bool,
-    mileage: u32, // todo!("Move `mileage: u32` field into `age` field - a tuple with two fields: an `Age` enum, u32");
+    age: Age,
 }
 
 #[derive(PartialEq, Debug)]
