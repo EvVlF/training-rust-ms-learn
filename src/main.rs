@@ -1,3 +1,6 @@
+use crate::Colors::{Blue, Green, Red, Silver};
+use crate::Transmission::{Automatic, Manual};
+
 #[derive(PartialEq, Debug)]
 // Declare Car struct to describe vehicle with four named fields
 struct Car {
@@ -13,6 +16,9 @@ enum Transmission { Manual, SemiAuto, Automatic }
 
 #[derive(PartialEq, Debug)]
 enum Age { New, Used }
+
+#[derive(PartialEq, Debug)]
+enum Colors { Blue, Green, Red, Silver }
 
 // Get the car quality by testing the value of the input argument
 // - miles (u32)
@@ -39,12 +45,19 @@ fn car_factory(color: String, motor: Transmission, roof: bool, miles: u32) -> Ca
     // Create a new "Car" instance as requested
     // - Bind first three fields to values of input arguments
     // - "age" field calls "car_quality" function with "miles" input argument
-    Car {
-        color: color,
-        motor: motor,
-        roof: roof,
-        age: car_quality(miles),
-    }
+    Car { color, motor, roof, age: car_quality(miles) }
 }
 
-fn main() {}
+fn main() {
+    // Create car color array
+    let colors: [Colors; 4] = [Blue, Green, Red, Silver];
+
+    // Declare the car type and initial values
+    let mut car: Car = Car {
+        color: "Blue".to_string(),
+        motor: Automatic,
+        roof: false,
+        age: (Age::New, 2),
+    };
+    let mut engine: Transmission = Manual;
+}
