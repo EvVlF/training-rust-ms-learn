@@ -1,7 +1,9 @@
 fn main() {
-    if 1 == 2 {
-        println!("True, the numbers are equal."); //
+    let formal = true;
+    let greeting = if formal { // if used here as an expression
+        "Good day to you."     // return a String
     } else {
-        println!("False, the numbers are not equal.");
-    }
+        "Hey!"                 // return a String
+    };
+    println!("{}", greeting)   // prints "Good day to you."
 }
