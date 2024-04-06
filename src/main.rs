@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 #[derive(PartialEq, Debug)]
 struct Car {
     color: String,
@@ -60,6 +62,12 @@ fn car_factory(order: i32, miles: u32) -> Car {
 }
 
 fn main() {
+    // Initialize a hash map for the car orders
+    // - Key: Car order number, i32
+    // - Value: Car order details, Car struct
+    use std::collections::HashMap;
+    let mut orders: HashMap<i32, Car> = HashMap::new();
+
     // Initialize counter variable
     let mut order = 1;
     // Declare a car as mutable "Car" struct
