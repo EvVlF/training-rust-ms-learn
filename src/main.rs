@@ -43,10 +43,20 @@ fn car_factory(color: String, motor: Transmission, roof: bool, miles: u32) -> Ca
     // Show details about car order
     // - Check if order is for Used or New car, then check the roof type
     // - Print details for New or Used car based on roof type
-    todo!("Add conditional expression: If car is Used age, then check roof type");
-    todo!("Add conditional expression: If roof is a hard top, print details");
-    // Call the `println!` macro to show the car order details
-    println!("Prepare a used car: {:?}, {}, Hard top, {} miles\n", motor, color, miles);
+    if car_quality(miles).0 == New {
+        if roof {
+            // Call the `println!` macro to show the car order details
+            println!("Prepare a used car: {:?}, {}, Hard top, {} miles\n", motor, color, miles);
+        } else {
+            println!("Preparing a used car: {:?}, {}, Convertible, {} miles", motor, color, miles);
+        }
+    } else {
+        if roof {
+            println!("Building a new car: {:?}, {}, Hard top, {} miles", motor, color, miles);
+        } else {
+            println!("Building a new car: {:?}, {}, Convertible, {} miles", motor, color, miles);
+        }
+    }
 
     // Create a new "Car" instance as requested
     // - Bind first three fields to values of input arguments
