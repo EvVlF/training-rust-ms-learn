@@ -80,7 +80,7 @@ fn main() {
     let mut order: i32 = 1;
 
     loop {
-        if order > 6 { break; }
+        if order > 11 { break; }
         // Call car_factory to fulfill order
         // Add order <K, V> pair to "orders" hash map
         // Call println! to show order details from the hash map
