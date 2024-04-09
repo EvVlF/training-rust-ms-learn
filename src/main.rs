@@ -1,6 +1,8 @@
 fn main() {
-    let a_number: Option<u8> = Some(7);
-    if let Some(7) = a_number {
-        println!("That's my lucky number!");
-    }
+    let gift = Some("candy");
+    assert_eq!(gift.unwrap(), "candy");
+
+    let empty_gift: Option<&str> = None;
+    assert_eq!(empty_gift.unwrap(), "candy"); // This will panic!
+
 }
