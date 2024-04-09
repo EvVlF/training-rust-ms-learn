@@ -1,8 +1,7 @@
 fn main() {
-    let gift = Some("candy");
-    assert_eq!(gift.unwrap(), "candy");
+    let a = Some("value");
+    assert_eq!(a.expect("fruits are healthy"), "value");
 
-    let empty_gift: Option<&str> = None;
-    assert_eq!(empty_gift.unwrap(), "candy"); // This will panic!
-
+    let b: Option<&str> = None;
+    b.expect("fruits are healthy"); // panics with `fruits are healthy`
 }
