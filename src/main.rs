@@ -1,8 +1,7 @@
 fn main() {
     {
         let mascot = String::from("ferris");
-        // transfer ownership of mascot to the variable ferris.
         let ferris = mascot;
+        println!("{}", mascot) // We'll try to use mascot after we've moved ownership of the string data from mascot to ferris.
     }
-// ferris is dropped here. The string data memory will be freed here.
 }
