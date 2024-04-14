@@ -1,8 +1,8 @@
 fn main() {
-    let mut greeting = String::from("hello");
-    change(&mut greeting);
-}
+    let mut value = String::from("hello");
 
-fn change(text: &mut String) {
-    text.push_str(", world");
+    let ref1 = &mut value;
+    let ref2 = &mut value;
+
+    println!("{}, {}", ref1, ref2);
 }
