@@ -1,9 +1,9 @@
 fn main() {}
 
-fn process(input: String) {}
+fn process(input: u32) {}
 
 fn caller() {
-    let s = String::from("Hello, world!");
-    process(s); // Ownership of the string in `s` moved into `process`
-    process(s); // Error! ownership already moved.
+    let n = 1u32;
+    process(n); // Ownership of the number in `n` copied into `process`
+    process(n); // `n` can be used again because it wasn't moved, it was copied.
 }
