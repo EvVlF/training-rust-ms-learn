@@ -1,8 +1,8 @@
 fn main() {
-    let mut value = String::from("hello");
-
-    let ref1 = &value;
-    let ref2 = &mut value;
-
-    println!("{}, {}", ref1, ref2);
+    let x;
+    {
+        let y = 42;
+        x = &y; // We store a reference to `y` in `x` but `y` is about to be dropped.
+    }
+    println!("x: {}", x); // `x` refers to `y` but `y has been dropped!
 }
