@@ -1,7 +1,9 @@
-fn main() {
-    {
-        let mascot = String::from("ferris");
-        let ferris = mascot;
-        println!("{}", mascot) // We'll try to use mascot after we've moved ownership of the string data from mascot to ferris.
-    }
+fn main() {}
+
+fn process(input: String) {}
+
+fn caller() {
+    let s = String::from("Hello, world!");
+    process(s); // Ownership of the string in `s` moved into `process`
+    process(s); // Error! ownership already moved.
 }
