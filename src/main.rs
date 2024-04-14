@@ -1,7 +1,5 @@
-fn process(s: String) {}
-
 fn main() {
-    let s = String::from("Hello, world!");
-    process(s.clone()); // Passing another value, cloned from `s`.
-    process(s); // s was never moved and so it can still be used.
+    let greeting = String::from("hello");
+    let greeting_reference = &greeting; // We borrow `greeting` but the string data is still owned by `greeting`
+    println!("Greeting: {}", greeting); // We can still use `greeting`
 }
