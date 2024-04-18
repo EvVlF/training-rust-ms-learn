@@ -1,15 +1,22 @@
-#[derive(Debug)]
-struct Highlight<'document>(&'document str);
-
-fn erase(_: String) { }
+// TODO: modify only this function.
+fn copy_and_return<'some_value>(vector: &'some_value mut Vec<String>, value: &'some_value str) -> &'some_value String {
+    vector.push(String::from(value));
+    vector.get(vector.len() - 1).unwrap()
+}
 
 fn main() {
-    let text = String::from("The quick brown fox jumps over the lazy dog.");
-    let fox = Highlight(&text[4..19]);
-    let dog = Highlight(&text[35..43]);
+    let name1 = "Joe";
+    let name2 = "Chris";
+    let name3 = "Anne";
 
-    erase(text);
+    let mut names = Vec::new();
 
-    println!("{:?}", fox);
-    println!("{:?}", dog);
+    assert_eq!("Joe", copy_and_return(&mut names, &name1));
+    assert_eq!("Chris", copy_and_return(&mut names, &name2));
+    assert_eq!("Anne", copy_and_return(&mut names, &name3));
+
+    assert_eq!(
+        names,
+        vec!["Joe".to_string(), "Chris".to_string(), "Anne".to_string()]
+    )
 }
