@@ -24,4 +24,13 @@ impl Area for Rectangle {
     }
 }
 
-fn main() {}
+fn main() {
+    let circle = Circle { radius: 5.0 };
+    let rectangle = Rectangle {
+        width: 10.0,
+        height: 20.0,
+    };
+
+    println!("Circle area: {}", circle.area());
+    println!("Rectangle area: {}", rectangle.area());
+}
