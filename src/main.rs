@@ -20,6 +20,11 @@ struct Dog {
     likes_petting: bool,
 }
 
+struct Cat {
+    name: String,
+    sharp_claws: bool,
+}
+
 impl AsJson for Person {
     fn as_json(&self) -> String {
         format!(
@@ -51,6 +56,13 @@ fn main() {
         likes_petting: true,
     };
 
+
+    let kitty = Cat {
+        name: String::from("Kitty"),
+        sharp_claws: false,
+    };
+
     send_data_as_json(&laura);
     send_data_as_json(&fido);
+    send_data_as_json(&kitty);
 }
