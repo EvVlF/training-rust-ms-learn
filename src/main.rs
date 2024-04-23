@@ -38,4 +38,19 @@ impl AsJson for Dog {
     }
 }
 
-fn main() {}
+fn main() {
+    let laura = Person {
+        name: String::from("Laura"),
+        age: 31,
+        favorite_fruit: String::from("apples"),
+    };
+
+    let fido = Dog {
+        name: String::from("Fido"),
+        color: String::from("Black"),
+        likes_petting: true,
+    };
+
+    send_data_as_json(&laura);
+    send_data_as_json(&fido);
+}
