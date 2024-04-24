@@ -28,4 +28,18 @@ impl Iterator for Counter {
 }
 
 fn main() {
+    let mut counter = Counter::new(6);
+    println!("Counter just created: {:#?}", counter);
+
+    assert_eq!(counter.next(), Some(1));
+    assert_eq!(counter.next(), Some(2));
+    assert_eq!(counter.next(), Some(3));
+    assert_eq!(counter.next(), Some(4));
+    assert_eq!(counter.next(), Some(5));
+    assert_eq!(counter.next(), Some(6));
+    assert_eq!(counter.next(), None);
+    assert_eq!(counter.next(), None);  // further calls to `next` will return `None`
+    assert_eq!(counter.next(), None);
+
+    println!("Counter exhausted: {:#?}", counter);
 }
