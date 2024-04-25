@@ -1,9 +1,9 @@
-struct Container {
-    value: u32,
+struct Container<T> {
+    value: T,
 }
 
-impl Container {
-    pub fn new(value: u32) -> Self {
+impl<T> Container<T> {
+    pub fn new(value: T) -> Self {
         Container { value }
     }
 }
