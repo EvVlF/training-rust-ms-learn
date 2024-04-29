@@ -1,21 +1,21 @@
 mod text_processing {
 
-    mod letters {
-        fn count_letters(text: &str) -> usize {
+    pub mod letters {
+        pub fn count_letters(text: &str) -> usize {
             text.chars().filter(|ref c| c.is_alphabetic()).count()
         }
     }
 
-    mod numbers {
-        fn count_numbers(text: &str) -> usize {
+    pub mod numbers {
+        pub fn count_numbers(text: &str) -> usize {
             text.chars().filter(|ref c| c.is_numeric()).count()
         }
     }
 }
 
 fn count_letters_and_numbers(text: &str) -> (usize, usize) {
-    let number_of_letters = ???;
-    let number_of_numbers = ???;
+    let number_of_letters = text_processing::letters::count_letters(&text);
+    let number_of_numbers = text_processing::numbers::count_numbers(&text);
     (number_of_letters, number_of_numbers)
 }
 
