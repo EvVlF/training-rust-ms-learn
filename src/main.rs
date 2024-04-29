@@ -1,5 +1,5 @@
 mod car_factory {
-    fn build_car() {
+    pub fn build_car() {
         println!("Honk honk!");
     }
 }
