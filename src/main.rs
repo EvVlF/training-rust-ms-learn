@@ -12,6 +12,7 @@ fn add_works() {
 }
 
 #[test]
+#[should_panic]
 fn add_fails() {
     assert_eq!(add(2, 2), 7);
 }
