@@ -16,3 +16,9 @@ fn add_works() {
 fn add_fails() {
     assert_eq!(add(2, 2), 7);
 }
+
+#[test]
+#[ignore = "not yet reviewed by the Q.A. team"]
+fn add_negatives() {
+    assert_eq!(add(-2, -2), -4)
+}
